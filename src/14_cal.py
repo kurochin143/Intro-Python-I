@@ -22,3 +22,11 @@ and does the following:
 import sys
 import calendar
 from datetime import datetime
+
+user_input = input("Enter month and year (separated by ,)").split(',')
+
+if len(user_input) == 2:
+  print(calendar.month(int(user_input[1]), int(user_input[0])))
+else:
+  today = datetime.today()
+  print(calendar.month(today.year, today.month))
